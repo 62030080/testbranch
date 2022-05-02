@@ -4,6 +4,19 @@ import 'package:flutter_application_2_coinapi/material/coinbox.dart';
 import 'package:flutter_application_2_coinapi/material/pagetextconfig.dart';
 import 'package:flutter_application_2_coinapi/page/coindatapage.dart';
 import 'package:http/http.dart' as http;
+import '../material/coinDataAPI.dart';
+import '../material/coinbox.dart';
+import 'coindatapage.dart';
+
+class FavoriteCoinStl extends StatelessWidget {
+  const FavoriteCoinStl({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return FavoriteCoinStf();
+  }
+}
+
 
 class FavoriteCoinStf extends StatefulWidget {
   const FavoriteCoinStf({Key? key}) : super(key: key);
@@ -13,6 +26,11 @@ class FavoriteCoinStf extends StatefulWidget {
 }
 
 class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
+
+
+
+  final double JPY = 130.123498;
+
   late CoinDataApi _dataFromAPI;
   final double JPY = 130.12;
   // CoinRank ? _dataFromAPI;
@@ -86,6 +104,9 @@ class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
                                       rank_c: "${result.data.coins[index].rank}",
                                       index_c: "${index}",
                                       color_c: "${result.data.coins[index].color}",
+                                      currency_c: 'JPY',
+
+
                                     )
                                 ));
                           },
