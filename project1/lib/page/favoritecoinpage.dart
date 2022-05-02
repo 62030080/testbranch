@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2_coinapi/material/coinDataAPI.dart';
+import 'package:flutter_application_2_coinapi/material/coinbox.dart';
 import 'package:flutter_application_2_coinapi/material/pagetextconfig.dart';
+
 import 'package:http/http.dart' as http;
 import '../material/coinDataAPI.dart';
 import '../material/coinbox.dart';
@@ -14,6 +17,7 @@ class FavoriteCoinStl extends StatelessWidget {
   }
 }
 
+
 class FavoriteCoinStf extends StatefulWidget {
   const FavoriteCoinStf({Key? key}) : super(key: key);
 
@@ -22,6 +26,7 @@ class FavoriteCoinStf extends StatefulWidget {
 }
 
 class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
+
 
 
   final double JPY = 130.123498;
@@ -87,6 +92,7 @@ class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context)
+
                                     => CoinDataPageStf(
                                       icon_c: "${result.data.coins[index].iconUrl}",
                                       symbol_c: "${result.data.coins[index].symbol}",
@@ -99,13 +105,16 @@ class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
                                       color_c: "${result.data.coins[index].color}",
                                       currency_c: 'JPY',
 
+
                                     )
                                 ));
                           },
                           child: CoinBox(
+
                               "${result.data.coins[index].symbol}",
                               "${result.data.coins[index].symbol}",
                               double.parse('${result.data.coins[index].price}')*JPY,
+
                               "${result.data.coins[index].iconUrl}",
                               Colors.white,
                               devicewitdh*0.3),
