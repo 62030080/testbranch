@@ -48,9 +48,10 @@ class CoinDataPageStf extends StatefulWidget {
 
 
   final String?
-
   color_c,
-      index_c, icon_c, symbol_c, name_c, rank_c ,currency_c;
+      index_c, icon_c, symbol_c, name_c, volume_c, rank_c;
+  final double
+  price_c, marketCap_c;
   const CoinDataPageStf({Key? key,
     required this.currency_c,
     required this.icon_c,
@@ -126,11 +127,10 @@ class _CoinDataPageStfState extends State<CoinDataPageStf> {
                     '${NumberFormat("#,###.####").format(widget.volume_c)}' + " " + "หน่วย", style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),
                 Text("Price = " +
-             '${NumberFormat("#,###.######").format(widget.price_c)}' + " " + '${widget.currency_c}', style: TextStyle(
+                  '${NumberFormat("#,###.######").format(widget.price_c??'0')}' + " " + widget.currency_c, style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),
                 Text("MarketCap = " +
-                    '${NumberFormat("#,###.####").format(widget.marketCap_c)}' + " " + '${widget.currency_c}'  , style: TextStyle(
-
+                    '${NumberFormat("#,###.####").format(widget.marketCap_c??'0')}' + " " + widget.currency_c, style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),
                 Text("Rank = ${widget.rank_c??''}", style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),

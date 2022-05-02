@@ -91,8 +91,8 @@ class _MainBodySTFState extends State<MainBodySTF> {
                                       symbol_c: "${result.data.coins[index].symbol}",
                                       name_c: "${result.data.coins[index].name}",
                                       price_c: double.parse('${result.data.coins[index].price}'),
-                                      marketCap_c:double.parse('${result.data.coins[index].marketCap}'),
-                                      volume_c: double.parse('${result.data.coins[index].hVolume}') ,
+                                      marketCap_c: double.parse('${result.data.coins[index].marketCap}'),
+                                      volume_c: "${result.data.coins[index].hVolume}",
                                       rank_c: "${result.data.coins[index].rank}",
                                       index_c: "${index}",
 
