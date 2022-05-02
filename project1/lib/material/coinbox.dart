@@ -4,13 +4,14 @@ import 'package:intl/intl.dart';
 import 'checkimg.dart';
 
 class CoinBox extends StatelessWidget {
+  String ccurrency;
   String symbol_cb;
   String cname; //ชื่อเหรียญ
   double cprice; //ราคาเหรียญ
   String cimage; //รูปเหรียญ
   Color color; //สีกล่อง
   double size; //ขนาดกล่อง
-  CoinBox(this.symbol_cb ,this.cname, this.cprice, this.cimage, this.color, this.size);
+  CoinBox(this.ccurrency,this.symbol_cb ,this.cname, this.cprice, this.cimage, this.color, this.size);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class CoinBox extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                '${NumberFormat("#,###.#####").format(cprice)} USD',
+                '${NumberFormat("#,###.#####").format(cprice)}' + ccurrency,
                 style: TextStyle(
                     fontSize: devicewidth*0.05,
                     color: Colors.blueGrey,

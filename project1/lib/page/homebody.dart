@@ -99,6 +99,7 @@ class _MainBodySTFState extends State<MainBodySTF> {
                             ));
                           },
                           child: CoinBox(
+                            "USD",
                               "${result.data.coins[index].symbol}",
                               "${result.data.coins[index].symbol}",
                               double.parse('${result.data.coins[index].price}'),
