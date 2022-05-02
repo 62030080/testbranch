@@ -3,6 +3,7 @@ import 'package:flutter_application_2_coinapi/material/coinDataAPI.dart';
 import 'package:flutter_application_2_coinapi/material/coinbox.dart';
 import 'package:flutter_application_2_coinapi/material/pagetextconfig.dart';
 import 'package:flutter_application_2_coinapi/page/coindatapage.dart';
+import 'package:flutter_application_2_coinapi/page/coindatapageforJPY.dart';
 import 'package:http/http.dart' as http;
 
 class FavoriteCoinStl extends StatelessWidget {
@@ -83,7 +84,8 @@ class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context)
-                                    => CoinDataPageStf(
+                                    => CoinDataPageStfforJPY(
+                                      currency_c: "JPY",
                                       icon_c: "${result.data.coins[index].iconUrl}",
                                       symbol_c: "${result.data.coins[index].symbol}",
                                       name_c: "${result.data.coins[index].name}",

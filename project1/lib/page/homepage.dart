@@ -60,7 +60,7 @@ class _Home_PageState extends State<Home_Page> {
       ),
       BottomNavigationBarItem(
       icon: Icon(Icons.favorite),
-      label: 'favorite',
+      label: 'Japan Price',
       backgroundColor: Colors.indigo,
       ),
       BottomNavigationBarItem(

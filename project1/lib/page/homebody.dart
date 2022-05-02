@@ -86,6 +86,7 @@ class _MainBodySTFState extends State<MainBodySTF> {
                                 MaterialPageRoute(
                                     builder: (context)
                                     => CoinDataPageStf(
+                                        currency_c: "USD",
                                       icon_c: "${result.data.coins[index].iconUrl}",
                                       symbol_c: "${result.data.coins[index].symbol}",
                                       name_c: "${result.data.coins[index].name}",
@@ -94,7 +95,7 @@ class _MainBodySTFState extends State<MainBodySTF> {
                                       volume_c: "${result.data.coins[index].hVolume}",
                                       rank_c: "${result.data.coins[index].rank}",
                                       index_c: "${index}",
-                                      color_c: "${result.data.coins[index].color}",
+                                      color_c: "${result.data.coins[index].color}"
                                 )
                             ));
                           },

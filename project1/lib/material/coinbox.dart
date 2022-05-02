@@ -36,7 +36,7 @@ class CoinBox extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               Text(
-                '${NumberFormat("#,###.#####").format(cprice)}' + ccurrency,
+                '${NumberFormat("#,###.#####").format(cprice)}' + ' ' + ccurrency,
                 style: TextStyle(
                     fontSize: devicewidth*0.05,
                     color: Colors.blueGrey,

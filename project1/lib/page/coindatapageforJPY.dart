@@ -28,7 +28,7 @@ class CoinDataPageStl extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CoinDataPageStf(
+    return CoinDataPageStfforJPY(
         icon_c: icon,
         symbol_c: symbol,
         name_c: name,
@@ -43,13 +43,13 @@ class CoinDataPageStl extends StatelessWidget {
   }
 }
 
-class CoinDataPageStf extends StatefulWidget {
+class CoinDataPageStfforJPY extends StatefulWidget {
   final String currency_c;
   final String?
 
   color_c,
       index_c, icon_c, symbol_c, name_c, price_c, marketCap_c, volume_c, rank_c;
-  const CoinDataPageStf({Key? key,
+  const CoinDataPageStfforJPY({Key? key,
     required this.currency_c,
     required this.icon_c,
     required this.symbol_c,
@@ -62,10 +62,10 @@ class CoinDataPageStf extends StatefulWidget {
     required this.color_c,
   }) : super(key: key);
   @override
-  State<CoinDataPageStf> createState() => _CoinDataPageStfState();
+  State<CoinDataPageStfforJPY> createState() => _CoinDataPageStfforJPYState();
 }
 
-class _CoinDataPageStfState extends State<CoinDataPageStf> {
+class _CoinDataPageStfforJPYState extends State<CoinDataPageStfforJPY> {
   @override
   Widget build(BuildContext context) {
     // print(widget.color_c);
@@ -121,10 +121,10 @@ class _CoinDataPageStfState extends State<CoinDataPageStf> {
                     '${NumberFormat("#,###.####").format(double.parse(widget.volume_c??'0'))}' + " " + "หน่วย", style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),
                 Text("Price = " +
-                  '${NumberFormat("#,###.######").format(double.parse(widget.price_c??'0'))}' + " " + widget.currency_c, style: TextStyle(
+                  '${NumberFormat("#,###.######").format(double.parse(widget.price_c??'0')*130.23)}' + " " + widget.currency_c, style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),
                 Text("MarketCap = " +
-                    '${NumberFormat("#,###.####").format(double.parse(widget.marketCap_c??'0'))}' + " " + widget.currency_c, style: TextStyle(
+                    '${NumberFormat("#,###.####").format(double.parse(widget.marketCap_c??'0')*130.23)}' + " " + widget.currency_c, style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),
                 Text("Rank = ${widget.rank_c??''}", style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),
