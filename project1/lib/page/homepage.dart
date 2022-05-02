@@ -34,7 +34,7 @@ class _Home_PageState extends State<Home_Page> {
     print("เรียกใช้ build");
     double devicewidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar:
+      appBar: 
       PreferredSize(
         preferredSize: Size.fromHeight(devicewidth*0.1),
         child: AppBar(
@@ -47,37 +47,37 @@ class _Home_PageState extends State<Home_Page> {
 
 
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Colors.indigo,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Buy/Sell',
-            backgroundColor: Colors.indigo,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'favorite',
-            backgroundColor: Colors.indigo,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_wallet),
-            label: 'Balance',
-            backgroundColor: Colors.indigo,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-            backgroundColor: Colors.indigo,
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
+      items: const <BottomNavigationBarItem>[
+      BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: 'Home',
+      backgroundColor: Colors.indigo,
       ),
-    );
+      BottomNavigationBarItem(
+      icon: Icon(Icons.shopping_cart),
+      label: 'Buy/Sell',
+      backgroundColor: Colors.indigo,
+      ),
+      BottomNavigationBarItem(
+      icon: Icon(Icons.favorite),
+      label: 'favorite',
+      backgroundColor: Colors.indigo,
+      ),
+      BottomNavigationBarItem(
+        icon: Icon(Icons.account_balance_wallet),
+        label: 'Balance',
+        backgroundColor: Colors.indigo,
+      ),
+      BottomNavigationBarItem(
+      icon: Icon(Icons.settings),
+      label: 'Settings',
+      backgroundColor: Colors.indigo,
+      ),
+      ],
+      currentIndex: _selectedIndex,
+      selectedItemColor: Colors.amber[800],
+      onTap: _onItemTapped,
+      ),
+      );
   }
 }
