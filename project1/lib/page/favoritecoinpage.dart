@@ -3,7 +3,6 @@ import 'package:flutter_application_2_coinapi/material/coinDataAPI.dart';
 import 'package:flutter_application_2_coinapi/material/coinbox.dart';
 import 'package:flutter_application_2_coinapi/material/pagetextconfig.dart';
 import 'package:flutter_application_2_coinapi/page/coindatapage.dart';
-import 'package:flutter_application_2_coinapi/page/coindatapageforJPY.dart';
 import 'package:http/http.dart' as http;
 
 class FavoriteCoinStf extends StatefulWidget {
