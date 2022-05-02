@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2_coinapi/material/pagetextconfig.dart';
 import 'package:http/http.dart' as http;
-import '../material/USDTOTHB.dart';
+
 import '../material/coinDataAPI.dart';
 import '../material/coinbox.dart';
 import 'coindatapage.dart';
@@ -17,7 +17,7 @@ class BuyCoinStl extends StatefulWidget {
 
 class _BuyCoinStlState extends State<BuyCoinStl> {
 
- final double THB = 34.389929;
+  final double THB = 34.389929;
 
   late CoinDataApi _dataFromAPI;
   // CoinRank ? _dataFromAPI;
@@ -86,11 +86,11 @@ class _BuyCoinStlState extends State<BuyCoinStl> {
                                       name_c: "${result.data.coins[index].name}",
                                       price_c: double.parse('${result.data.coins[index].price}')*THB,
                                       marketCap_c: double.parse('${result.data.coins[index].marketCap}')*THB,
-                                      volume_c: double.parse('${result.data.coins[index].hVolume}')*THB,
+                                      volume_c: double.parse('${result.data.coins[index].hVolume}'),
                                       rank_c: "${result.data.coins[index].rank}",
                                       index_c: "${index}",
                                       color_c: "${result.data.coins[index].color}",
-                                        currency_c: 'THB',
+                                      currency_c: 'THB',
 
                                     )
                                 ));
@@ -101,7 +101,8 @@ class _BuyCoinStlState extends State<BuyCoinStl> {
                               double.parse('${result.data.coins[index].price}')*THB,
                               "${result.data.coins[index].iconUrl}",
                               Colors.white,
-                              devicewitdh*0.3),
+                              devicewitdh*0.3,
+                              'THB',)
                         ),
                       ],
                     )

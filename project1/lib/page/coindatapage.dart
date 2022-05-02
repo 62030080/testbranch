@@ -48,9 +48,8 @@ class CoinDataPageStf extends StatefulWidget {
 
 
   final String?
-
   color_c,
-      index_c, icon_c, symbol_c, name_c, rank_c ,currency_c;
+      index_c, icon_c, symbol_c, name_c, rank_c,currency_c;
   const CoinDataPageStf({Key? key,
     required this.currency_c,
     required this.icon_c,
@@ -63,7 +62,6 @@ class CoinDataPageStf extends StatefulWidget {
     required this.index_c,
     required this.color_c,
 
-    required this.currency_c
 
   }) : super(key: key);
   @override
@@ -92,8 +90,8 @@ class _CoinDataPageStfState extends State<CoinDataPageStf> {
         preferredSize: Size.fromHeight(devicewidth*0.1),
         child: AppBar(
           iconTheme: IconThemeData(
-            size: devicewidth*0.06,
-            color: HexColor(text_color)
+              size: devicewidth*0.06,
+              color: HexColor(text_color)
           ),
           backgroundColor: HexColor(color_cc),
           title: Text('CoinDataPage',style: TextStyle(fontSize: devicewidth*0.06,color: HexColor(text_color)),),
@@ -103,13 +101,13 @@ class _CoinDataPageStfState extends State<CoinDataPageStf> {
         child: Column(
           children: [
             Center(child: Text(
-              widget.symbol_c??'', style: TextStyle(
+                widget.symbol_c??'', style: TextStyle(
                 fontSize: devicewidth * 0.2,fontWeight: FontWeight.bold,color: HexColor(text_color)))),
             Container(
               height: devicewidth /2,
               width: devicewidth *1,
               child: CheckImg(aimg: widget.icon_c??'',
-                        symcheck: widget.symbol_c??''
+                  symcheck: widget.symbol_c??''
               ),
             ),
             SizedBox(height: devicewidth * 0.05,),
@@ -126,11 +124,10 @@ class _CoinDataPageStfState extends State<CoinDataPageStf> {
                     '${NumberFormat("#,###.####").format(widget.volume_c)}' + " " + "หน่วย", style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),
                 Text("Price = " +
-             '${NumberFormat("#,###.######").format(widget.price_c)}' + " " + '${widget.currency_c}', style: TextStyle(
+                    '${NumberFormat("#,###.######").format(widget.price_c)}' + " " + ' ${ widget.currency_c}', style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),
                 Text("MarketCap = " +
-                    '${NumberFormat("#,###.####").format(widget.marketCap_c)}' + " " + '${widget.currency_c}'  , style: TextStyle(
-
+                    '${NumberFormat("#,###.####").format(widget.marketCap_c)}' + " " + ' ${ widget.currency_c}'  , style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),
                 Text("Rank = ${widget.rank_c??''}", style: TextStyle(
                     fontSize: devicewidth * 0.06,fontWeight: FontWeight.bold,color: HexColor(text_color))),

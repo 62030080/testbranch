@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2_coinapi/page/coindatapage.dart';
 import 'package:http/http.dart' as http;
-import 'package:web_socket_channel/web_socket_channel.dart';
 import 'coindatapage.dart';
 import '../material/coinDataAPI.dart';
 import '../material/coinbox.dart';
@@ -23,6 +22,8 @@ class MainBodySTF extends StatefulWidget {
 }
 
 class _MainBodySTFState extends State<MainBodySTF> {
+
+
 
   late CoinDataApi _dataFromAPI;
   // CoinRank ? _dataFromAPI;
@@ -86,30 +87,28 @@ class _MainBodySTFState extends State<MainBodySTF> {
                                 MaterialPageRoute(
                                     builder: (context)
                                     => CoinDataPageStf(
-                                        currency_c: "USD",
                                       icon_c: "${result.data.coins[index].iconUrl}",
                                       symbol_c: "${result.data.coins[index].symbol}",
                                       name_c: "${result.data.coins[index].name}",
                                       price_c: double.parse('${result.data.coins[index].price}'),
-                                      marketCap_c:double.parse('${result.data.coins[index].marketCap}'),
-                                      volume_c: double.parse('${result.data.coins[index].hVolume}') ,
+                                      marketCap_c: double.parse('${result.data.coins[index].marketCap}'),
+                                      volume_c: double.parse('${result.data.coins[index].hVolume}'),
                                       rank_c: "${result.data.coins[index].rank}",
                                       index_c: "${index}",
-
                                       color_c: "${result.data.coins[index].color}",
                                       currency_c: 'USD',
 
-                                )
-                            ));
+                                    )
+                                ));
                           },
                           child: CoinBox(
-                            "USD",
                               "${result.data.coins[index].symbol}",
                               "${result.data.coins[index].symbol}",
                               double.parse('${result.data.coins[index].price}'),
                               "${result.data.coins[index].iconUrl}",
                               Colors.white,
-                              devicewitdh*0.3),
+                              devicewitdh*0.3,
+                              'USD'),
                         ),
                       ],
                     )
@@ -121,4 +120,3 @@ class _MainBodySTFState extends State<MainBodySTF> {
       },);
   }
 }
-

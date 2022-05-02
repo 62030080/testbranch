@@ -16,7 +16,7 @@ class _Home_PageState extends State<Home_Page> {
   static const List<Widget>_changeScreen = [
     MainBodyStl(),
     BuyCoinStl(),
-    FavoriteCoinStf(),
+    FavoriteCoinStl(),
     WalletPageStl(),
     SettingPageStl()
   ];
@@ -60,7 +60,7 @@ class _Home_PageState extends State<Home_Page> {
       ),
       BottomNavigationBarItem(
       icon: Icon(Icons.favorite),
-      label: 'Japan Price',
+      label: 'favorite',
       backgroundColor: Colors.indigo,
       ),
       BottomNavigationBarItem(
