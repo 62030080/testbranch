@@ -90,12 +90,15 @@ class _MainBodySTFState extends State<MainBodySTF> {
                                       icon_c: "${result.data.coins[index].iconUrl}",
                                       symbol_c: "${result.data.coins[index].symbol}",
                                       name_c: "${result.data.coins[index].name}",
-                                      price_c: '${result.data.coins[index].price}',
-                                      marketCap_c: "${result.data.coins[index].marketCap}",
-                                      volume_c: "${result.data.coins[index].hVolume}",
+                                      price_c: double.parse('${result.data.coins[index].price}'),
+                                      marketCap_c:double.parse('${result.data.coins[index].marketCap}'),
+                                      volume_c: double.parse('${result.data.coins[index].hVolume}') ,
                                       rank_c: "${result.data.coins[index].rank}",
                                       index_c: "${index}",
-                                      color_c: "${result.data.coins[index].color}"
+
+                                      color_c: "${result.data.coins[index].color}",
+                                      currency_c: 'USD',
+
                                 )
                             ));
                           },

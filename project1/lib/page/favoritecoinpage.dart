@@ -2,9 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2_coinapi/material/coinDataAPI.dart';
 import 'package:flutter_application_2_coinapi/material/coinbox.dart';
 import 'package:flutter_application_2_coinapi/material/pagetextconfig.dart';
-import 'package:flutter_application_2_coinapi/page/coindatapage.dart';
-import 'package:flutter_application_2_coinapi/page/coindatapageforJPY.dart';
+
 import 'package:http/http.dart' as http;
+import '../material/coinDataAPI.dart';
+import '../material/coinbox.dart';
+import 'coindatapage.dart';
+
+class FavoriteCoinStl extends StatelessWidget {
+  const FavoriteCoinStl({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return FavoriteCoinStf();
+  }
+}
+
 
 class FavoriteCoinStf extends StatefulWidget {
   const FavoriteCoinStf({Key? key}) : super(key: key);
@@ -14,6 +26,11 @@ class FavoriteCoinStf extends StatefulWidget {
 }
 
 class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
+
+
+
+  final double JPY = 130.123498;
+
   late CoinDataApi _dataFromAPI;
   // CoinRank ? _dataFromAPI;
   @override
@@ -75,25 +92,29 @@ class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context)
-                                    => CoinDataPageStfforJPY(
-                                      currency_c: "JPY",
+
+                                    => CoinDataPageStf(
                                       icon_c: "${result.data.coins[index].iconUrl}",
                                       symbol_c: "${result.data.coins[index].symbol}",
                                       name_c: "${result.data.coins[index].name}",
-                                      price_c: '${result.data.coins[index].price}',
-                                      marketCap_c: "${result.data.coins[index].marketCap}",
-                                      volume_c: "${result.data.coins[index].hVolume}",
+                                      price_c: double.parse('${result.data.coins[index].price}')*JPY,
+                                      marketCap_c: double.parse('${result.data.coins[index].marketCap}')*JPY,
+                                      volume_c: double.parse('${result.data.coins[index].hVolume}')*JPY,
                                       rank_c: "${result.data.coins[index].rank}",
                                       index_c: "${index}",
                                       color_c: "${result.data.coins[index].color}",
+                                      currency_c: 'JPY',
+
+
                                     )
                                 ));
                           },
                           child: CoinBox(
-                            "THB",
+
                               "${result.data.coins[index].symbol}",
                               "${result.data.coins[index].symbol}",
-                              double.parse('${result.data.coins[index].price}') * 30,
+                              double.parse('${result.data.coins[index].price}')*JPY,
+
                               "${result.data.coins[index].iconUrl}",
                               Colors.white,
                               devicewitdh*0.3),
