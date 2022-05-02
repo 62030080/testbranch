@@ -15,6 +15,7 @@ class FavoriteCoinStf extends StatefulWidget {
 
 class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
   late CoinDataApi _dataFromAPI;
+  final double JPY = 130.12;
   // CoinRank ? _dataFromAPI;
   @override
   void initState() {
@@ -75,13 +76,13 @@ class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context)
-                                    => CoinDataPageStfforJPY(
+                                    => CoinDataPageStf(
                                       currency_c: "JPY",
                                       icon_c: "${result.data.coins[index].iconUrl}",
                                       symbol_c: "${result.data.coins[index].symbol}",
                                       name_c: "${result.data.coins[index].name}",
-                                      price_c: '${result.data.coins[index].price}',
-                                      marketCap_c: "${result.data.coins[index].marketCap}",
+                                      price_c: double.parse('${result.data.coins[index].price}') * JPY,
+                                      marketCap_c: double.parse("${result.data.coins[index].marketCap}") * JPY,
                                       volume_c: "${result.data.coins[index].hVolume}",
                                       rank_c: "${result.data.coins[index].rank}",
                                       index_c: "${index}",
@@ -90,10 +91,10 @@ class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
                                 ));
                           },
                           child: CoinBox(
-                            "THB",
+                            "JPY",
                               "${result.data.coins[index].symbol}",
                               "${result.data.coins[index].symbol}",
-                              double.parse('${result.data.coins[index].price}') * 30,
+                              double.parse('${result.data.coins[index].price}') * JPY,
                               "${result.data.coins[index].iconUrl}",
                               Colors.white,
                               devicewitdh*0.3),
