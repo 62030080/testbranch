@@ -16,7 +16,7 @@ class _Home_PageState extends State<Home_Page> {
   static const List<Widget>_changeScreen = [
     MainBodyStl(),
     BuyCoinStl(),
-    FavoriteCoinStl(),
+    FavoriteCoinStf(),
     WalletPageStl(),
     SettingPageStl()
   ];

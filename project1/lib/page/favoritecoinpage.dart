@@ -6,15 +6,6 @@ import 'package:flutter_application_2_coinapi/page/coindatapage.dart';
 import 'package:flutter_application_2_coinapi/page/coindatapageforJPY.dart';
 import 'package:http/http.dart' as http;
 
-class FavoriteCoinStl extends StatelessWidget {
-  const FavoriteCoinStl({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return FavoriteCoinStf();
-  }
-}
-
 class FavoriteCoinStf extends StatefulWidget {
   const FavoriteCoinStf({Key? key}) : super(key: key);
 
