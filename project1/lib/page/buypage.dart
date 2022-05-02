@@ -6,23 +6,16 @@ import '../material/coinDataAPI.dart';
 import '../material/coinbox.dart';
 import 'coindatapage.dart';
 
-class BuyCoinStl extends StatelessWidget {
+
+
+class BuyCoinStl extends StatefulWidget {
   const BuyCoinStl({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return BuyCoinStf();
-  }
+  State<BuyCoinStl> createState() => _BuyCoinStlState();
 }
 
-class BuyCoinStf extends StatefulWidget {
-  const BuyCoinStf({Key? key}) : super(key: key);
-
-  @override
-  State<BuyCoinStf> createState() => _BuyCoinStfState();
-}
-
-class _BuyCoinStfState extends State<BuyCoinStf> {
+class _BuyCoinStlState extends State<BuyCoinStl> {
 
  final double THB = 30.0;
 
