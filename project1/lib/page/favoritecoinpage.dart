@@ -28,9 +28,6 @@ class FavoriteCoinStf extends StatefulWidget {
 class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
 
 
-
-  final double JPY = 130.123498;
-
   late CoinDataApi _dataFromAPI;
   final double JPY = 130.12;
   // CoinRank ? _dataFromAPI;
@@ -100,11 +97,10 @@ class _FavoriteCoinStfState extends State<FavoriteCoinStf> {
                                       name_c: "${result.data.coins[index].name}",
                                       price_c: double.parse('${result.data.coins[index].price}') * JPY,
                                       marketCap_c: double.parse("${result.data.coins[index].marketCap}") * JPY,
-                                      volume_c: "${result.data.coins[index].hVolume}",
+                                      volume_c: double.parse("${result.data.coins[index].hVolume}"),
                                       rank_c: "${result.data.coins[index].rank}",
                                       index_c: "${index}",
                                       color_c: "${result.data.coins[index].color}",
-                                      currency_c: 'JPY',
 
 
                                     )

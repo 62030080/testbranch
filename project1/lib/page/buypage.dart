@@ -96,9 +96,10 @@ class _BuyCoinStlState extends State<BuyCoinStl> {
                                 ));
                           },
                           child: CoinBox(
+                              "THB",
                               "${result.data.coins[index].symbol}",
                               "${result.data.coins[index].symbol}",
-                              double.parse('${result.data.coins[index].price}')*THB,
+                              double.parse('${result.data.coins[index].price}') * THB,
                               "${result.data.coins[index].iconUrl}",
                               Colors.white,
                               devicewitdh*0.3),

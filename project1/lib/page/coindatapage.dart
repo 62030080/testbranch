@@ -7,51 +7,12 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 import '../material/checkimg.dart';
 
-
-class CoinDataPageStl extends StatelessWidget {
-  final double  price , marketCap, volume;
-  final String?
-  color,
-      index, icon, symbol, name, rank ,currency;
-  const CoinDataPageStl({Key? key,
-    required this.icon,
-    required this.symbol,
-    required this.name,
-    required this.price,
-    required this.marketCap,
-    required this.volume,
-    required this.rank,
-    required this.index,
-    required this.color,
-    required this.currency
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return CoinDataPageStf(
-        icon_c: icon,
-        symbol_c: symbol,
-        name_c: name,
-        price_c: price,
-        marketCap_c: marketCap,
-        volume_c: volume,
-        rank_c: rank,
-        index_c: index,
-        color_c: color,
-        currency_c: currency
-    );
-  }
-}
-
 class CoinDataPageStf extends StatefulWidget {
   final double  price_c , marketCap_c, volume_c;
-
-
+  final String currency_c;
   final String?
   color_c,
-      index_c, icon_c, symbol_c, name_c, volume_c, rank_c;
-  final double
-  price_c, marketCap_c;
+      index_c, icon_c, symbol_c, name_c, rank_c;
   const CoinDataPageStf({Key? key,
     required this.currency_c,
     required this.icon_c,
@@ -63,8 +24,6 @@ class CoinDataPageStf extends StatefulWidget {
     required this.rank_c,
     required this.index_c,
     required this.color_c,
-
-    required this.currency_c
 
   }) : super(key: key);
   @override
