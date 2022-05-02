@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74b61555-050f-47c8-8b52-2d48113e0fb8" name="Default Changelist" comment="Add CoinAPI Project">
-      <change beforePath="$PROJECT_DIR$/.idea/testbranch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/testbranch.iml" afterDir="false" />
+    <list default="true" id="74b61555-050f-47c8-8b52-2d48113e0fb8" name="Default Changelist" comment="Add Arai Mai Roo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/lib/page/buypage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/project1/lib/page/buypage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/lib/page/coindatapage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/project1/lib/page/coindatapage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/lib/page/favoritecoinpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/project1/lib/page/favoritecoinpage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/lib/page/homebody.dart" beforeDir="false" afterPath="$PROJECT_DIR$/project1/lib/page/homebody.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="28YzO2taeCzg2aut3TA6GUpNUzl" />
@@ -24,10 +29,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager">
@@ -57,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651472600377</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Arai Mai Roo">
+      <created>1651481014252</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651481014252</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,6 +88,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add CoinAPI Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add CoinAPI Project" />
+    <MESSAGE value="Add Arai Mai Roo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Arai Mai Roo" />
   </component>
 </project>
