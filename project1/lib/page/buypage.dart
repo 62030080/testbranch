@@ -17,7 +17,7 @@ class BuyCoinStl extends StatefulWidget {
 
 class _BuyCoinStlState extends State<BuyCoinStl> {
 
- final double THB = 30.0;
+ final double THB = 34.389929;
 
   late CoinDataApi _dataFromAPI;
   // CoinRank ? _dataFromAPI;
